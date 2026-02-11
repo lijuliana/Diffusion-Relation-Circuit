@@ -1,0 +1,121 @@
+clean_prompt,corrupt_prompt,clean_rel,corrupt_rel,candidate_layer,candidate_head,candidate_label,clean_at_clean,corrupt_at_clean,patched_at_clean,patch_plus_zero_at_clean,recovery_loss
+blue circle is above red square,blue circle is below red square,above,below,1,0,L1H0,0.8,0.0,0.4,0.5,-0.09999999999999998
+blue circle is above red square,blue circle is below red square,above,below,1,1,L1H1,0.8,0.0,0.4,0.3,0.10000000000000003
+blue circle is above red square,blue circle is below red square,above,below,1,2,L1H2,0.8,0.0,0.4,0.4,0.0
+blue circle is above red square,blue circle is below red square,above,below,1,3,L1H3,0.8,0.0,0.4,0.3,0.10000000000000003
+blue circle is above red square,blue circle is below red square,above,below,1,4,L1H4,0.8,0.0,0.4,0.4,0.0
+blue circle is above red square,blue circle is below red square,above,below,1,5,L1H5,0.8,0.0,0.4,0.4,0.0
+blue circle is above red square,blue circle is below red square,above,below,2,0,L2H0,0.8,0.0,0.4,0.4,0.0
+blue circle is above red square,blue circle is below red square,above,below,2,1,L2H1,0.8,0.0,0.4,0.4,0.0
+blue circle is above red square,blue circle is below red square,above,below,2,2,L2H2,0.8,0.0,0.4,0.4,0.0
+blue circle is above red square,blue circle is below red square,above,below,2,3,L2H3,0.8,0.0,0.4,0.4,0.0
+blue circle is above red square,blue circle is below red square,above,below,2,4,L2H4,0.8,0.0,0.4,0.4,0.0
+blue circle is above red square,blue circle is below red square,above,below,2,5,L2H5,0.8,0.0,0.4,0.4,0.0
+blue circle is above red square,blue circle is below red square,above,below,3,0,L3H0,0.8,0.0,0.4,0.4,0.0
+blue circle is above red square,blue circle is below red square,above,below,3,1,L3H1,0.8,0.0,0.4,0.4,0.0
+blue circle is above red square,blue circle is below red square,above,below,3,2,L3H2,0.8,0.0,0.4,0.4,0.0
+blue circle is above red square,blue circle is below red square,above,below,3,3,L3H3,0.8,0.0,0.4,0.4,0.0
+blue circle is above red square,blue circle is below red square,above,below,3,4,L3H4,0.8,0.0,0.4,0.4,0.0
+blue circle is above red square,blue circle is below red square,above,below,3,5,L3H5,0.8,0.0,0.4,0.4,0.0
+blue circle is above red square,blue circle is below red square,above,below,4,0,L4H0,0.8,0.0,0.4,0.4,0.0
+blue circle is above red square,blue circle is below red square,above,below,4,1,L4H1,0.8,0.0,0.4,0.4,0.0
+blue circle is above red square,blue circle is below red square,above,below,4,2,L4H2,0.8,0.0,0.4,0.4,0.0
+blue circle is above red square,blue circle is below red square,above,below,4,3,L4H3,0.8,0.0,0.4,0.4,0.0
+blue circle is above red square,blue circle is below red square,above,below,4,4,L4H4,0.8,0.0,0.4,0.4,0.0
+blue circle is above red square,blue circle is below red square,above,below,4,5,L4H5,0.8,0.0,0.4,0.4,0.0
+blue circle is above red square,blue circle is below red square,above,below,5,0,L5H0,0.8,0.0,0.4,0.4,0.0
+blue circle is above red square,blue circle is below red square,above,below,5,1,L5H1,0.8,0.0,0.4,0.4,0.0
+blue circle is above red square,blue circle is below red square,above,below,5,2,L5H2,0.8,0.0,0.4,0.4,0.0
+blue circle is above red square,blue circle is below red square,above,below,5,3,L5H3,0.8,0.0,0.4,0.4,0.0
+blue circle is above red square,blue circle is below red square,above,below,5,4,L5H4,0.8,0.0,0.4,0.4,0.0
+blue circle is above red square,blue circle is below red square,above,below,5,5,L5H5,0.8,0.0,0.4,0.4,0.0
+blue circle is to the upper right of red square,blue circle is to the lower left of red square,upper_right,lower_left,1,0,L1H0,0.9,0.0,1.0,0.9,0.09999999999999998
+blue circle is to the upper right of red square,blue circle is to the lower left of red square,upper_right,lower_left,1,1,L1H1,0.9,0.0,1.0,1.0,0.0
+blue circle is to the upper right of red square,blue circle is to the lower left of red square,upper_right,lower_left,1,2,L1H2,0.9,0.0,1.0,1.0,0.0
+blue circle is to the upper right of red square,blue circle is to the lower left of red square,upper_right,lower_left,1,3,L1H3,0.9,0.0,1.0,1.0,0.0
+blue circle is to the upper right of red square,blue circle is to the lower left of red square,upper_right,lower_left,1,4,L1H4,0.9,0.0,1.0,1.0,0.0
+blue circle is to the upper right of red square,blue circle is to the lower left of red square,upper_right,lower_left,1,5,L1H5,0.9,0.0,1.0,1.0,0.0
+blue circle is to the upper right of red square,blue circle is to the lower left of red square,upper_right,lower_left,2,0,L2H0,0.9,0.0,1.0,1.0,0.0
+blue circle is to the upper right of red square,blue circle is to the lower left of red square,upper_right,lower_left,2,1,L2H1,0.9,0.0,1.0,1.0,0.0
+blue circle is to the upper right of red square,blue circle is to the lower left of red square,upper_right,lower_left,2,2,L2H2,0.9,0.0,1.0,1.0,0.0
+blue circle is to the upper right of red square,blue circle is to the lower left of red square,upper_right,lower_left,2,3,L2H3,0.9,0.0,1.0,1.0,0.0
+blue circle is to the upper right of red square,blue circle is to the lower left of red square,upper_right,lower_left,2,4,L2H4,0.9,0.0,1.0,1.0,0.0
+blue circle is to the upper right of red square,blue circle is to the lower left of red square,upper_right,lower_left,2,5,L2H5,0.9,0.0,1.0,1.0,0.0
+blue circle is to the upper right of red square,blue circle is to the lower left of red square,upper_right,lower_left,3,0,L3H0,0.9,0.0,1.0,1.0,0.0
+blue circle is to the upper right of red square,blue circle is to the lower left of red square,upper_right,lower_left,3,1,L3H1,0.9,0.0,1.0,1.0,0.0
+blue circle is to the upper right of red square,blue circle is to the lower left of red square,upper_right,lower_left,3,2,L3H2,0.9,0.0,1.0,1.0,0.0
+blue circle is to the upper right of red square,blue circle is to the lower left of red square,upper_right,lower_left,3,3,L3H3,0.9,0.0,1.0,1.0,0.0
+blue circle is to the upper right of red square,blue circle is to the lower left of red square,upper_right,lower_left,3,4,L3H4,0.9,0.0,1.0,0.9,0.09999999999999998
+blue circle is to the upper right of red square,blue circle is to the lower left of red square,upper_right,lower_left,3,5,L3H5,0.9,0.0,1.0,1.0,0.0
+blue circle is to the upper right of red square,blue circle is to the lower left of red square,upper_right,lower_left,4,0,L4H0,0.9,0.0,1.0,1.0,0.0
+blue circle is to the upper right of red square,blue circle is to the lower left of red square,upper_right,lower_left,4,1,L4H1,0.9,0.0,1.0,1.0,0.0
+blue circle is to the upper right of red square,blue circle is to the lower left of red square,upper_right,lower_left,4,2,L4H2,0.9,0.0,1.0,1.0,0.0
+blue circle is to the upper right of red square,blue circle is to the lower left of red square,upper_right,lower_left,4,3,L4H3,0.9,0.0,1.0,1.0,0.0
+blue circle is to the upper right of red square,blue circle is to the lower left of red square,upper_right,lower_left,4,4,L4H4,0.9,0.0,1.0,1.0,0.0
+blue circle is to the upper right of red square,blue circle is to the lower left of red square,upper_right,lower_left,4,5,L4H5,0.9,0.0,1.0,0.9,0.09999999999999998
+blue circle is to the upper right of red square,blue circle is to the lower left of red square,upper_right,lower_left,5,0,L5H0,0.9,0.0,1.0,1.0,0.0
+blue circle is to the upper right of red square,blue circle is to the lower left of red square,upper_right,lower_left,5,1,L5H1,0.9,0.0,1.0,1.0,0.0
+blue circle is to the upper right of red square,blue circle is to the lower left of red square,upper_right,lower_left,5,2,L5H2,0.9,0.0,1.0,1.0,0.0
+blue circle is to the upper right of red square,blue circle is to the lower left of red square,upper_right,lower_left,5,3,L5H3,0.9,0.0,1.0,1.0,0.0
+blue circle is to the upper right of red square,blue circle is to the lower left of red square,upper_right,lower_left,5,4,L5H4,0.9,0.0,1.0,1.0,0.0
+blue circle is to the upper right of red square,blue circle is to the lower left of red square,upper_right,lower_left,5,5,L5H5,0.9,0.0,1.0,0.9,0.09999999999999998
+blue circle is to the lower left of red square,blue circle is to the upper right of red square,lower_left,upper_right,1,0,L1H0,0.9,0.0,0.9,1.0,-0.09999999999999998
+blue circle is to the lower left of red square,blue circle is to the upper right of red square,lower_left,upper_right,1,1,L1H1,0.9,0.0,0.9,1.0,-0.09999999999999998
+blue circle is to the lower left of red square,blue circle is to the upper right of red square,lower_left,upper_right,1,2,L1H2,0.9,0.0,0.9,0.9,0.0
+blue circle is to the lower left of red square,blue circle is to the upper right of red square,lower_left,upper_right,1,3,L1H3,0.9,0.0,0.9,0.8,0.09999999999999998
+blue circle is to the lower left of red square,blue circle is to the upper right of red square,lower_left,upper_right,1,4,L1H4,0.9,0.0,0.9,0.8,0.09999999999999998
+blue circle is to the lower left of red square,blue circle is to the upper right of red square,lower_left,upper_right,1,5,L1H5,0.9,0.0,0.9,0.8,0.09999999999999998
+blue circle is to the lower left of red square,blue circle is to the upper right of red square,lower_left,upper_right,2,0,L2H0,0.9,0.0,0.9,1.0,-0.09999999999999998
+blue circle is to the lower left of red square,blue circle is to the upper right of red square,lower_left,upper_right,2,1,L2H1,0.9,0.0,0.9,0.9,0.0
+blue circle is to the lower left of red square,blue circle is to the upper right of red square,lower_left,upper_right,2,2,L2H2,0.9,0.0,0.9,0.8,0.09999999999999998
+blue circle is to the lower left of red square,blue circle is to the upper right of red square,lower_left,upper_right,2,3,L2H3,0.9,0.0,0.9,0.9,0.0
+blue circle is to the lower left of red square,blue circle is to the upper right of red square,lower_left,upper_right,2,4,L2H4,0.9,0.0,0.9,0.8,0.09999999999999998
+blue circle is to the lower left of red square,blue circle is to the upper right of red square,lower_left,upper_right,2,5,L2H5,0.9,0.0,0.9,0.8,0.09999999999999998
+blue circle is to the lower left of red square,blue circle is to the upper right of red square,lower_left,upper_right,3,0,L3H0,0.9,0.0,0.9,0.9,0.0
+blue circle is to the lower left of red square,blue circle is to the upper right of red square,lower_left,upper_right,3,1,L3H1,0.9,0.0,0.9,0.8,0.09999999999999998
+blue circle is to the lower left of red square,blue circle is to the upper right of red square,lower_left,upper_right,3,2,L3H2,0.9,0.0,0.9,0.9,0.0
+blue circle is to the lower left of red square,blue circle is to the upper right of red square,lower_left,upper_right,3,3,L3H3,0.9,0.0,0.9,0.9,0.0
+blue circle is to the lower left of red square,blue circle is to the upper right of red square,lower_left,upper_right,3,4,L3H4,0.9,0.0,0.9,0.9,0.0
+blue circle is to the lower left of red square,blue circle is to the upper right of red square,lower_left,upper_right,3,5,L3H5,0.9,0.0,0.9,0.8,0.09999999999999998
+blue circle is to the lower left of red square,blue circle is to the upper right of red square,lower_left,upper_right,4,0,L4H0,0.9,0.0,0.9,0.9,0.0
+blue circle is to the lower left of red square,blue circle is to the upper right of red square,lower_left,upper_right,4,1,L4H1,0.9,0.0,0.9,0.9,0.0
+blue circle is to the lower left of red square,blue circle is to the upper right of red square,lower_left,upper_right,4,2,L4H2,0.9,0.0,0.9,0.9,0.0
+blue circle is to the lower left of red square,blue circle is to the upper right of red square,lower_left,upper_right,4,3,L4H3,0.9,0.0,0.9,0.9,0.0
+blue circle is to the lower left of red square,blue circle is to the upper right of red square,lower_left,upper_right,4,4,L4H4,0.9,0.0,0.9,0.9,0.0
+blue circle is to the lower left of red square,blue circle is to the upper right of red square,lower_left,upper_right,4,5,L4H5,0.9,0.0,0.9,0.9,0.0
+blue circle is to the lower left of red square,blue circle is to the upper right of red square,lower_left,upper_right,5,0,L5H0,0.9,0.0,0.9,0.9,0.0
+blue circle is to the lower left of red square,blue circle is to the upper right of red square,lower_left,upper_right,5,1,L5H1,0.9,0.0,0.9,0.8,0.09999999999999998
+blue circle is to the lower left of red square,blue circle is to the upper right of red square,lower_left,upper_right,5,2,L5H2,0.9,0.0,0.9,0.8,0.09999999999999998
+blue circle is to the lower left of red square,blue circle is to the upper right of red square,lower_left,upper_right,5,3,L5H3,0.9,0.0,0.9,0.9,0.0
+blue circle is to the lower left of red square,blue circle is to the upper right of red square,lower_left,upper_right,5,4,L5H4,0.9,0.0,0.9,0.9,0.0
+blue circle is to the lower left of red square,blue circle is to the upper right of red square,lower_left,upper_right,5,5,L5H5,0.9,0.0,0.9,0.8,0.09999999999999998
+blue circle is below red square,blue circle is above red square,below,above,1,0,L1H0,0.7,0.0,0.7,0.8,-0.10000000000000009
+blue circle is below red square,blue circle is above red square,below,above,1,1,L1H1,0.7,0.0,0.7,0.9,-0.20000000000000007
+blue circle is below red square,blue circle is above red square,below,above,1,2,L1H2,0.7,0.0,0.7,0.7,0.0
+blue circle is below red square,blue circle is above red square,below,above,1,3,L1H3,0.7,0.0,0.7,0.6,0.09999999999999998
+blue circle is below red square,blue circle is above red square,below,above,1,4,L1H4,0.7,0.0,0.7,0.8,-0.10000000000000009
+blue circle is below red square,blue circle is above red square,below,above,1,5,L1H5,0.7,0.0,0.7,0.8,-0.10000000000000009
+blue circle is below red square,blue circle is above red square,below,above,2,0,L2H0,0.7,0.0,0.7,0.8,-0.10000000000000009
+blue circle is below red square,blue circle is above red square,below,above,2,1,L2H1,0.7,0.0,0.7,0.6,0.09999999999999998
+blue circle is below red square,blue circle is above red square,below,above,2,2,L2H2,0.7,0.0,0.7,0.7,0.0
+blue circle is below red square,blue circle is above red square,below,above,2,3,L2H3,0.7,0.0,0.7,0.8,-0.10000000000000009
+blue circle is below red square,blue circle is above red square,below,above,2,4,L2H4,0.7,0.0,0.7,0.8,-0.10000000000000009
+blue circle is below red square,blue circle is above red square,below,above,2,5,L2H5,0.7,0.0,0.7,0.7,0.0
+blue circle is below red square,blue circle is above red square,below,above,3,0,L3H0,0.7,0.0,0.7,0.6,0.09999999999999998
+blue circle is below red square,blue circle is above red square,below,above,3,1,L3H1,0.7,0.0,0.7,0.7,0.0
+blue circle is below red square,blue circle is above red square,below,above,3,2,L3H2,0.7,0.0,0.7,0.7,0.0
+blue circle is below red square,blue circle is above red square,below,above,3,3,L3H3,0.7,0.0,0.7,0.7,0.0
+blue circle is below red square,blue circle is above red square,below,above,3,4,L3H4,0.7,0.0,0.7,0.7,0.0
+blue circle is below red square,blue circle is above red square,below,above,3,5,L3H5,0.7,0.0,0.7,0.8,-0.10000000000000009
+blue circle is below red square,blue circle is above red square,below,above,4,0,L4H0,0.7,0.0,0.7,0.7,0.0
+blue circle is below red square,blue circle is above red square,below,above,4,1,L4H1,0.7,0.0,0.7,0.6,0.09999999999999998
+blue circle is below red square,blue circle is above red square,below,above,4,2,L4H2,0.7,0.0,0.7,0.6,0.09999999999999998
+blue circle is below red square,blue circle is above red square,below,above,4,3,L4H3,0.7,0.0,0.7,0.7,0.0
+blue circle is below red square,blue circle is above red square,below,above,4,4,L4H4,0.7,0.0,0.7,0.8,-0.10000000000000009
+blue circle is below red square,blue circle is above red square,below,above,4,5,L4H5,0.7,0.0,0.7,0.8,-0.10000000000000009
+blue circle is below red square,blue circle is above red square,below,above,5,0,L5H0,0.7,0.0,0.7,0.7,0.0
+blue circle is below red square,blue circle is above red square,below,above,5,1,L5H1,0.7,0.0,0.7,0.8,-0.10000000000000009
+blue circle is below red square,blue circle is above red square,below,above,5,2,L5H2,0.7,0.0,0.7,0.8,-0.10000000000000009
+blue circle is below red square,blue circle is above red square,below,above,5,3,L5H3,0.7,0.0,0.7,0.7,0.0
+blue circle is below red square,blue circle is above red square,below,above,5,4,L5H4,0.7,0.0,0.7,0.7,0.0
+blue circle is below red square,blue circle is above red square,below,above,5,5,L5H5,0.7,0.0,0.7,0.7,0.0
