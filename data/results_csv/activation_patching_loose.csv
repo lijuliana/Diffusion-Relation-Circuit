@@ -1,0 +1,7 @@
+layer,head,head_label,is_target,n_pairs,clean_acc_mean,corrupt_acc_mean,patched_acc_mean,recovery_fraction_mean,recovery_fraction_std,recovery_fraction_ci_lo,recovery_fraction_ci_hi
+1,2,L1H2,True,19,0.9263157894736843,0.0,0.0,0.0,0.0,0.0,0.0
+0,5,L0H5,False,19,0.9263157894736843,0.0,0.0,0.0,0.0,0.0,0.0
+1,3,L1H3,False,19,0.9263157894736843,0.0,0.0,0.0,0.0,0.0,0.0
+2,1,L2H1,False,19,0.9263157894736843,0.0,0.0,0.0,0.0,0.0,0.0
+2,2,L2H2,False,19,0.9263157894736843,0.0,0.0,0.0,0.0,0.0,0.0
+4,4,L4H4,False,19,0.9263157894736843,0.0,0.0,0.0,0.0,0.0,0.0
