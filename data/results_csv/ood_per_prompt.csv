@@ -1,0 +1,20 @@
+set,prompt,baseline_loose,ablated_loose,delta
+synonym,blue circle is beneath red square,0.9,0.6,0.30000000000000004
+synonym,blue circle is on top of red square,0.9,0.4,0.5
+synonym,blue circle is over red square,0.7,0.6,0.09999999999999998
+synonym,blue circle is to the left side of red square,1.0,0.9,0.09999999999999998
+synonym,blue circle is to the right side of red square,0.5,0.7,-0.19999999999999996
+synonym,blue circle is under red square,0.7,0.4,0.29999999999999993
+synonym,blue circle is underneath red square,0.8,0.6,0.20000000000000007
+unseen_pair,red square is above and to the left of blue triangle,0.9,0.7,0.20000000000000007
+unseen_pair,red square is above and to the right of blue triangle,1.0,0.3,0.7
+unseen_pair,red square is above blue triangle,0.5,0.0,0.5
+unseen_pair,red square is below and to the left of blue triangle,0.8,0.1,0.7000000000000001
+unseen_pair,red square is below and to the right of blue triangle,0.6,0.1,0.5
+unseen_pair,red square is below blue triangle,0.4,0.2,0.2
+unseen_pair,red square is to the left of blue triangle,0.9,0.4,0.5
+unseen_pair,red square is to the lower left of blue triangle,1.0,0.3,0.7
+unseen_pair,red square is to the lower right of blue triangle,0.8,0.3,0.5
+unseen_pair,red square is to the right of blue triangle,0.9,0.3,0.6000000000000001
+unseen_pair,red square is to the upper left of blue triangle,0.9,0.6,0.30000000000000004
+unseen_pair,red square is to the upper right of blue triangle,0.9,0.2,0.7
