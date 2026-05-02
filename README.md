@@ -139,6 +139,7 @@ All experiments fit on a single NVIDIA A100 (80 GB) — PixArt-mini inference us
 
 ## Licenses
 
+- Code: MIT (see [`LICENSE`](LICENSE))
 - Trained model weights & synthetic prompt data: CC-BY-4.0
 - Vendored PixArt-alpha code: AGPL-3.0 (see `PixArt-alpha/`)
 - T5-XXL: Apache-2.0 (Google)
