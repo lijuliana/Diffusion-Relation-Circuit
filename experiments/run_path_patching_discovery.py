@@ -14,7 +14,7 @@ Per-pair patch + 30 candidates + 250 steps + 10 imgs ≈ 30 candidates *
 30 s = 15 min per pair. Use 4 relation-flip pairs to average.
 
 Output:
-  paper_original_completion/data/path_patching_discovery.csv
+  results/path_patching_discovery.csv
 """
 from __future__ import annotations
 import argparse, gc, os, sys, time
@@ -25,7 +25,7 @@ import pandas as pd
 import torch
 import torch.nn.functional as F
 
-PROJECT_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", ".."))
+PROJECT_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
 sys.path.insert(0, PROJECT_ROOT)
 sys.path.insert(0, join(PROJECT_ROOT, "PixArt-alpha"))
 
@@ -178,7 +178,7 @@ def parse_args():
     p.add_argument("--num_inference_steps", type=int, default=250)
     p.add_argument("--guidance_scale", type=float, default=4.5)
     p.add_argument("--generator_seed", type=int, default=42)
-    p.add_argument("--out_csv", default=join(PROJECT_ROOT, "paper_original_completion", "data", "path_patching_discovery.csv"))
+    p.add_argument("--out_csv", default=join(PROJECT_ROOT, "results", "path_patching_discovery.csv"))
     return p.parse_args()
 
 

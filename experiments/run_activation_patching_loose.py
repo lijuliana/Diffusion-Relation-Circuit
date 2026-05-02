@@ -40,7 +40,7 @@ import pandas as pd
 import torch
 import torch.nn.functional as F
 
-PROJECT_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", ".."))
+PROJECT_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
 sys.path.insert(0, PROJECT_ROOT)
 sys.path.insert(0, join(PROJECT_ROOT, "PixArt-alpha"))
 

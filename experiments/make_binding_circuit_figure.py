@@ -16,8 +16,8 @@ import numpy as np
 import pandas as pd
 
 PROJECT_ROOT = "/DiffusionInterp"
-OUT_DIR = join(PROJECT_ROOT, "paper_original_completion", "figures")
-DATA_DIR = join(PROJECT_ROOT, "paper_original_completion", "data")
+OUT_DIR = join(PROJECT_ROOT, "figures")
+DATA_DIR = join(PROJECT_ROOT, "results")
 os.makedirs(OUT_DIR, exist_ok=True)
 
 import matplotlib

@@ -7,7 +7,7 @@ Two panels:
  (b) curves for the top-6 heads + 5 random non-spatial controls, x=epoch,
      y=|projection|.
 
-Source: paper_original_completion/data/emergence_all_heads.csv.
+Source: results/emergence_all_heads.csv.
 """
 import os
 from os.path import join
@@ -15,8 +15,8 @@ from os.path import join
 import numpy as np
 import pandas as pd
 
-PROJECT_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", ".."))
-OUT_DIR = join(PROJECT_ROOT, "paper_original_completion", "figures")
+PROJECT_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
+OUT_DIR = join(PROJECT_ROOT, "figures")
 os.makedirs(OUT_DIR, exist_ok=True)
 
 import matplotlib
@@ -30,7 +30,7 @@ import matplotlib.pyplot as plt
 import matplotlib.patches as mpatches
 
 
-df = pd.read_csv(join(PROJECT_ROOT, "paper_original_completion", "data",
+df = pd.read_csv(join(PROJECT_ROOT, "results",
                       "emergence_all_heads.csv"))
 df["label"] = df.apply(lambda r: f"L{int(r['layer'])}H{int(r['head'])}", axis=1)
 epochs = sorted(df["epoch"].unique())

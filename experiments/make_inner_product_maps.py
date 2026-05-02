@@ -11,7 +11,7 @@ import pandas as pd
 import torch
 import torch.nn.functional as F
 
-PROJECT_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", ".."))
+PROJECT_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
 sys.path.insert(0, PROJECT_ROOT)
 sys.path.insert(0, join(PROJECT_ROOT, "PixArt-alpha"))
 
@@ -76,7 +76,7 @@ def main():
     })
     import matplotlib.pyplot as plt
 
-    out_dir = join(PROJECT_ROOT, "paper_original_completion", "figures")
+    out_dir = join(PROJECT_ROOT, "figures")
     os.makedirs(out_dir, exist_ok=True)
 
     for layer, head in [(0, 0), (1, 2)]:

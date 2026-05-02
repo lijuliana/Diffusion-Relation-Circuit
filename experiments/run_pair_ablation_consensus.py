@@ -15,7 +15,7 @@ import numpy as np
 import pandas as pd
 import torch
 
-PROJECT_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", ".."))
+PROJECT_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
 sys.path.insert(0, PROJECT_ROOT)
 sys.path.insert(0, join(PROJECT_ROOT, "PixArt-alpha"))
 
@@ -92,12 +92,12 @@ def main():
         print(f"   {time.time()-t0:.1f}s")
 
     out = pd.concat(summary_rows, ignore_index=True)
-    out_path = join(PROJECT_ROOT, "paper_original_completion", "data",
+    out_path = join(PROJECT_ROOT, "results",
                     "pair_ablation_consensus.csv")
     os.makedirs(os.path.dirname(out_path), exist_ok=True)
     out.to_csv(out_path, index=False)
     pd.concat(eval_rows, ignore_index=True).to_csv(
-        join(PROJECT_ROOT, "paper_original_completion", "data",
+        join(PROJECT_ROOT, "results",
              "pair_ablation_consensus_eval_rows.csv"), index=False)
     print(f"\n[save] -> {out_path}")
     print()
@@ -129,7 +129,7 @@ def main():
             candidate=c_lab, baseline=b, d_src=d_s, d_cand=d_c, d_pair=d_p, interaction=I,
         ))
     pd.DataFrame(interaction_rows).to_csv(
-        join(PROJECT_ROOT, "paper_original_completion", "data",
+        join(PROJECT_ROOT, "results",
              "pair_ablation_consensus_interactions.csv"), index=False)
 
 

@@ -15,7 +15,7 @@ from os.path import join
 import numpy as np
 import pandas as pd
 
-PROJECT_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", ".."))
+PROJECT_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
 
 
 def build_ramp(rel: str, base: int = 8) -> np.ndarray:
@@ -36,7 +36,7 @@ def build_ramp(rel: str, base: int = 8) -> np.ndarray:
 
 
 def main():
-    npz_path = join(PROJECT_ROOT, "paper_original_completion", "data",
+    npz_path = join(PROJECT_ROOT, "results",
                     "head_out_pos_pattern.npz")
     if not os.path.exists(npz_path):
         raise SystemExit(f"missing {npz_path}; run B2 first.")
@@ -75,7 +75,7 @@ def main():
                 n_prompts=n_prompts,
             ))
     out_df = pd.DataFrame(rows).sort_values("ramp_abs_corr", ascending=False)
-    out_path = join(PROJECT_ROOT, "paper_original_completion", "data",
+    out_path = join(PROJECT_ROOT, "results",
                     "spatial_ramp_projection.csv")
     out_df.to_csv(out_path, index=False)
     print()

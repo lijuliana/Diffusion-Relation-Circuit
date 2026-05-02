@@ -11,8 +11,8 @@ from os.path import join
 import numpy as np
 import pandas as pd
 
-PROJECT_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", ".."))
-OUT_DIR     = join(PROJECT_ROOT, "paper_original_completion", "figures")
+PROJECT_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
+OUT_DIR     = join(PROJECT_ROOT, "figures")
 os.makedirs(OUT_DIR, exist_ok=True)
 
 import matplotlib

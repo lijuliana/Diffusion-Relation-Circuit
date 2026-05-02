@@ -19,7 +19,7 @@ import numpy as np
 import pandas as pd
 
 PROJECT_ROOT = "/DiffusionInterp"
-DATA_DIR    = join(PROJECT_ROOT, "paper_original_completion", "data")
+DATA_DIR    = join(PROJECT_ROOT, "results")
 EXP_DIR     = join(PROJECT_ROOT, "experiments")
 
 

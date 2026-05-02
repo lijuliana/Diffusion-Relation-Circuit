@@ -20,8 +20,8 @@ import matplotlib.patches as mpatches
 from matplotlib.patches import FancyArrowPatch, FancyBboxPatch
 
 PROJECT_ROOT = "/DiffusionInterp"
-OUT_DIR = os.path.join(PROJECT_ROOT, "paper_original_completion", "figures")
-DATA_DIR = os.path.join(PROJECT_ROOT, "paper_original_completion", "data")
+OUT_DIR = os.path.join(PROJECT_ROOT, "figures")
+DATA_DIR = os.path.join(PROJECT_ROOT, "results")
 
 
 def panel_schematic(ax):

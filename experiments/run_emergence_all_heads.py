@@ -10,7 +10,7 @@ For each checkpoint:
   4. For each (layer, head): compute |cosine|, |projection|, energy of
      OV-write to the 8x8 spatial ramp.
 
-Output: paper_original_completion/data/emergence_all_heads.csv
+Output: results/emergence_all_heads.csv
         with rows (epoch, layer, head, abs_cosine, projection, energy).
 """
 import os, sys, gc, time
@@ -20,7 +20,7 @@ import numpy as np
 import pandas as pd
 import torch
 
-PROJECT_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", ".."))
+PROJECT_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
 sys.path.insert(0, PROJECT_ROOT)
 sys.path.insert(0, join(PROJECT_ROOT, "PixArt-alpha"))
 
@@ -106,7 +106,7 @@ def main():
               f"({time.time()-t0:.1f}s)", flush=True)
 
     out_df = pd.DataFrame(rows_out)
-    out_path = join(PROJECT_ROOT, "paper_original_completion", "data",
+    out_path = join(PROJECT_ROOT, "results",
                     "emergence_all_heads.csv")
     os.makedirs(os.path.dirname(out_path), exist_ok=True)
     out_df.to_csv(out_path, index=False)

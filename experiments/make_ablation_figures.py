@@ -9,8 +9,8 @@ from os.path import join
 import numpy as np
 import pandas as pd
 
-PROJECT_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", ".."))
-OUT_DIR = join(PROJECT_ROOT, "paper_original_completion", "figures")
+PROJECT_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
+OUT_DIR = join(PROJECT_ROOT, "figures")
 os.makedirs(OUT_DIR, exist_ok=True)
 
 import matplotlib
@@ -67,7 +67,7 @@ def fig_single_head():
 
 def fig_multi_head():
     # Use the unified 30-prompt set values (consistent with Table 3 and pair-ablation)
-    df = pd.read_csv(join(PROJECT_ROOT, "paper_original_completion", "data",
+    df = pd.read_csv(join(PROJECT_ROOT, "results",
                           "unified_ablation_30prompt.csv"))
     rc_mean = df[df["label"].str.startswith("random_ctrl_")]["spatial_relationship_loose"].mean()
     pretty = {

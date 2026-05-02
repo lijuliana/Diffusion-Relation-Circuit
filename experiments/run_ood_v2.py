@@ -20,7 +20,7 @@ import torch
 import numpy as np
 import pandas as pd
 
-PROJECT_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", ".."))
+PROJECT_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
 sys.path.insert(0, PROJECT_ROOT)
 sys.path.insert(0, join(PROJECT_ROOT, "PixArt-alpha"))
 
@@ -198,7 +198,7 @@ def main():
             gc.collect(); torch.cuda.empty_cache()
 
     out = pd.DataFrame(rows)
-    out_path = join(PROJECT_ROOT, "paper_original_completion", "data",
+    out_path = join(PROJECT_ROOT, "results",
                     "ood_harder.csv")
     os.makedirs(os.path.dirname(out_path), exist_ok=True)
     out.to_csv(out_path, index=False)

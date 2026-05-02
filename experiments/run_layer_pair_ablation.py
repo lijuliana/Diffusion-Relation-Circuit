@@ -17,7 +17,7 @@ from typing import List, Tuple
 
 import torch, pandas as pd, numpy as np
 
-PROJECT_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", ".."))
+PROJECT_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
 sys.path.insert(0, PROJECT_ROOT)
 sys.path.insert(0, join(PROJECT_ROOT, "PixArt-alpha"))
 os.environ.setdefault("HF_HOME", "/workspace/hf_cache")
@@ -125,7 +125,7 @@ def main():
               f"({time.time()-t1:.1f}s)", flush=True)
         gc.collect(); torch.cuda.empty_cache()
 
-    out_dir = join(PROJECT_ROOT, "paper_original_completion", "data")
+    out_dir = join(PROJECT_ROOT, "results")
     os.makedirs(out_dir, exist_ok=True)
     pd.DataFrame(rows_A).to_csv(join(out_dir, "layer_pair_ablation.csv"), index=False)
     pd.DataFrame(rows_B).to_csv(join(out_dir, "triple_ablation.csv"), index=False)

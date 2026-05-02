@@ -16,8 +16,8 @@ from os.path import join
 import numpy as np
 import pandas as pd
 
-PROJECT_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", ".."))
-DATA_DIR    = join(PROJECT_ROOT, "paper_original_completion", "data")
+PROJECT_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
+DATA_DIR    = join(PROJECT_ROOT, "results")
 
 
 def load_table(path, layer_col="layer", head_col="head"):

@@ -20,7 +20,7 @@ import pandas as pd
 import torch
 import torch.nn.functional as F
 
-PROJECT_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", ".."))
+PROJECT_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
 sys.path.insert(0, PROJECT_ROOT)
 sys.path.insert(0, join(PROJECT_ROOT, "PixArt-alpha"))
 
@@ -205,7 +205,7 @@ def main():
     print("Top 15 candidates (by |mean Pearson with L0H0|):")
     print(candidates.head(15).to_string(index=False))
 
-    out_path = join(PROJECT_ROOT, "paper_original_completion", "data",
+    out_path = join(PROJECT_ROOT, "results",
                     "activation_correlation.csv")
     os.makedirs(os.path.dirname(out_path), exist_ok=True)
     out_df.to_csv(out_path, index=False)
@@ -214,7 +214,7 @@ def main():
     # Save the per-position pattern tensor for Phase B3.
     pos_arr = np.stack(per_prompt_pos_pattern, axis=0)  # (P_prompts, L, H, 64)
     np.savez_compressed(
-        join(PROJECT_ROOT, "paper_original_completion", "data",
+        join(PROJECT_ROOT, "results",
              "head_out_pos_pattern.npz"),
         pos_pattern=pos_arr,
         relations=np.array(per_prompt_relations),

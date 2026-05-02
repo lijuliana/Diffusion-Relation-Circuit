@@ -17,7 +17,7 @@ import pandas as pd
 
 PROJECT_ROOT = "/DiffusionInterp"
 SRC_DIR = join(PROJECT_ROOT, "experiments")
-OUT_DIR = join(PROJECT_ROOT, "paper_original_completion", "data")
+OUT_DIR = join(PROJECT_ROOT, "results")
 os.makedirs(OUT_DIR, exist_ok=True)
 
 
