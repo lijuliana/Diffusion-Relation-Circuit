@@ -13,27 +13,28 @@ We mechanistically resolve how a small PixArt-mini DiT (6 layers, 36 cross-atten
 ```
 dit-mech-interp/
 ├── README.md
+├── LICENSE
 ├── requirements.txt
-├── PixArt-alpha/                 # vendored DiT model code (architecture + diffusion utils)
-├── src/                          # core utility modules (model loading, eval, hooks, etc.)
-├── experiments/                  # standalone scripts: every analysis + figure in the paper
-├── notebooks/                    # interactive walkthroughs (head discovery, ablation, variance partition)
-├── checkpoints/                  # trained PixArt-mini weights at 11 training epochs
-├── t5_embedding_cache.pt         # cached T5-XXL embeddings for all training prompts
-├── data/
-│   └── shapes_dataset_pilot.pth  # synthetic 2-color × 3-shape × 8-relation training data
-├── results/                      # CSVs of per-experiment results (consumed by figure scripts)
-└── figures/                      # final paper figures (PDF + PNG)
+├── PixArt-alpha/    # vendored DiT model code (architecture + diffusion utils)
+├── src/             # core utility modules (model loading, eval, hooks, etc.)
+├── experiments/     # standalone scripts: every analysis + figure in the paper
+├── notebooks/       # interactive walkthroughs (head discovery, ablation, variance partition)
+├── results/         # CSVs of per-experiment results (consumed by figure scripts)
+└── figures/         # final paper figures (PDF + PNG)
 ```
 
-> **Heavy assets are not in the Git repo.** The 11 checkpoints (~2.8 GB total, ~274 MB each), the T5 embedding cache (~166 MB), and the `shapes_dataset_pilot.pth` (~469 MB) exceed GitHub's per-file 100 MB limit. They are distributed separately — see the project's GitHub Releases page or contact the authors. Place the files at the paths the scripts expect:
->
-> ```
-> checkpoints/epoch_{100,250,500,600,700,750,800,900,1000,2000,4000}_step_*.pth
-> checkpoints/config.py
-> t5_embedding_cache.pt
-> data/shapes_dataset_pilot.pth
-> ```
+### Heavy assets (not tracked in the Git repo)
+
+The following files exceed GitHub's per-file 100 MB limit and are **not** in this repository. To run the experiment scripts (`experiments/run_*.py`) or the notebooks, you'll need to obtain them separately and place them at the paths below:
+
+| Path | Size | What it is |
+|---|---|---|
+| `checkpoints/epoch_{100,250,500,600,700,750,800,900,1000,2000,4000}_step_*.pth` | ~274 MB each, ~2.8 GB total | Trained PixArt-mini weights at 11 training epochs |
+| `checkpoints/config.py` | small | Model/training config |
+| `t5_embedding_cache.pt` | ~166 MB | Cached T5-XXL embeddings for all training prompts |
+| `data/shapes_dataset_pilot.pth` | ~469 MB | Synthetic 2-color × 3-shape × 8-relation training data |
+
+Contact the authors for access. Note that the figure-generation scripts (`experiments/make_*.py`) only consume the CSVs in [`results/`](results/) and **do not require any of the heavy assets** — those reproduce all figures in the paper directly from the committed data.
 
 ---
 
@@ -97,10 +98,11 @@ Each `run_*.py` in [`experiments/`](experiments/) executes one analysis end-to-e
 | Path-patching downstream search    | `run_path_patching_discovery.py`        |
 | 4-method consensus ranking         | `run_consensus_ranking.py`              |
 
-These scripts assume:
-- Checkpoints are accessible at [`checkpoints/epoch_<E>_step_<S>.pth`](checkpoints/)
-- T5 cache is at [`t5_embedding_cache.pt`](t5_embedding_cache.pt)
-- Training dataset is at [`data/shapes_dataset_pilot.pth`](data/shapes_dataset_pilot.pth)
+These scripts require the heavy assets that are not tracked in the repo (see the **Heavy assets** section above). Specifically they expect:
+
+- Checkpoints at `checkpoints/epoch_<E>_step_<S>.pth`
+- T5 embedding cache at `t5_embedding_cache.pt`
+- Training dataset at `data/shapes_dataset_pilot.pth`
 
 CFG guidance scale = 4.5 (matches training); evaluation sampling steps = 250.
 
