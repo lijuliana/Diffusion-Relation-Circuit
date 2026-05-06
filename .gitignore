@@ -1,0 +1,32 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg-info/
+.venv/
+venv/
+.ipynb_checkpoints/
+
+# OS
+.DS_Store
+
+# LaTeX build artefacts
+paper/*.aux
+paper/*.bbl
+paper/*.blg
+paper/*.fdb_latexmk
+paper/*.fls
+paper/*.log
+paper/*.out
+paper/*.synctex.gz
+
+# Heavy assets — exceed GitHub's 100 MB per-file limit.
+# Distribute via GitHub Releases / external host instead.
+checkpoints/
+t5_embedding_cache.pt
+data/shapes_dataset_pilot.pth
+
+# Per-run experiment outputs (intermediate)
+experiments/_tmp_*
+*.tmp
