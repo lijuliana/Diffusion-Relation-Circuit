@@ -27,7 +27,6 @@ import matplotlib.patches as mpatches
 
 
 df = pd.read_csv(join(PROJECT_ROOT, "experiments", "verify_top_heads_align.csv"))
-df["abs_projection"] = df["projection"].abs()
 n_layers = int(df["layer"].max()) + 1
 n_heads  = int(df["head"].max()) + 1
 
@@ -37,22 +36,29 @@ def make_grid(col):
         g[int(r["layer"]), int(r["head"])] = r[col]
     return g
 
-cos_grid = make_grid("abs_cosine")
-proj_grid = make_grid("abs_projection")
+# Use SIGNED cosine and projection (preserves bipolar contrast: heads with
+# anti-aligned writes show up in deep blue, aligned writes in deep red).
+# Energy is intrinsically non-negative.
+cos_grid = make_grid("cosine")
+proj_grid = make_grid("projection")
 energy_grid = make_grid("energy")
 
+proj_lim = max(abs(proj_grid.min()), abs(proj_grid.max())) * 1.05
 fig, axes = plt.subplots(1, 3, figsize=(16, 5.4))
 metrics = [
-    (cos_grid, r"$|\cos|$", "coolwarm", 0, 1, ".2f"),
-    (proj_grid, r"projection magnitude", "coolwarm", 0, proj_grid.max() * 1.05, ".1f"),
-    (energy_grid, r"energy", "Reds",      0, energy_grid.max() * 1.05, ".0f"),
+    (cos_grid,    r"cosine",                "RdBu_r",  -1.0,        1.0,       ".2f"),
+    (proj_grid,   r"signed projection $p$", "RdBu_r",  -proj_lim,   proj_lim,  ".1f"),
+    (energy_grid, r"energy",                "Reds",     0,          energy_grid.max() * 1.05, ".0f"),
 ]
 for ax, (grid, title, cmap, vmin, vmax, fmt) in zip(axes, metrics):
     im = ax.imshow(grid, cmap=cmap, vmin=vmin, vmax=vmax, aspect="equal")
     for li in range(n_layers):
         for hi in range(n_heads):
             v = grid[li, hi]
-            txt_color = "white" if (v - vmin) / (vmax - vmin + 1e-9) > 0.55 else "black"
+            # text colour: white on saturated cells (extremes), black elsewhere
+            half = (vmax - vmin) / 2.0
+            mid  = (vmax + vmin) / 2.0
+            txt_color = "white" if abs(v - mid) > 0.5 * half else "black"
             ax.text(hi, li, f"{v:{fmt}}", ha="center", va="center",
                     fontsize=10, fontweight="bold", color=txt_color)
     ax.set_xticks(range(n_heads)); ax.set_xticklabels([f"H{h}" for h in range(n_heads)])
