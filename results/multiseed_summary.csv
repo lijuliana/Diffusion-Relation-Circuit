@@ -1,0 +1,4 @@
+seed,estar,top1,top2,top2_early_layers
+44,600,L0H2,L2H3,False
+45,600,L0H3,L0H4,True
+46,600,L1H5,L0H4,True

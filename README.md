@@ -17,6 +17,8 @@ dit-mech-interp/
 ├── requirements.txt
 ├── PixArt-alpha/    # vendored DiT model code (architecture + diffusion utils)
 ├── src/             # core utility modules (model loading, eval, hooks, etc.)
+├── scripts/         # standalone reproduction scripts
+│   └── multiseed/   # multi-seed retrain + emergence-analysis pipeline
 ├── notebooks/       # interactive walkthroughs (head discovery, ablation, variance partition)
 ├── results/         # CSVs of per-experiment results
 └── figures/         # final paper figures (PDF + PNG)
@@ -70,6 +72,25 @@ For interactive exploration of the discovery pipeline:
 3. [`03_identifiability_and_variance_partition.ipynb`](notebooks/03_identifiability_and_variance_partition.ipynb) — variance-partitioned R² of the caption-projection geometry.
 
 The notebooks reference modules in [`src/`](src/) and assume the project root is on `sys.path`.
+
+---
+
+## Multi-seed replication
+
+[`scripts/multiseed/`](scripts/multiseed/) reproduces the phase-transition and
+early-layer-routing robustness check across independent training seeds:
+
+1. `render_shapes_dataset.py` — regenerate the synthetic object-relation dataset (spec-matched to the pilot).
+2. `make_t5_cache.py` — build the frozen T5-XXL embedding table for the 144 prompts.
+3. `train_replication_seed.py` — retrain PixArt-mini from scratch for one seed.
+4. `analyze_multiseed.py` — re-run the alignment scan per checkpoint, locate the Phase-II onset `E*`, and write [`results/multiseed_summary.csv`](results/) / `multiseed_emergence.csv`.
+
+Each script's `--help` documents its arguments.
+
+Across three replication seeds (plus the original), the sharp phase transition
+and early-layer routing localization reproduce, while the specific head indices
+permute. These scripts import the utility modules under `src/` and, like the
+notebooks, assume the project root is on `sys.path`.
 
 ---
 
