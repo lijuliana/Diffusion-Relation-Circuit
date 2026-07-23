@@ -10,25 +10,23 @@ We wanted to know whether the same kind of head-level circuit story that people 
 
 ## What we found
 
+The computation splits into two stages: two early heads decide *where* each object goes, and Layer 2 fills in *what* goes there.
+
+![Two-stage cross-attention circuit for spatial-relation binding](figures/circuit_diagram_poster.png)
+
 - **Spatial routing lives in two early heads.** Two heads, `L0H0` and `L1H2` in layers 0 and 1, carry almost all of the spatial signal. Their query-key circuits turn the relation token into a directional bias over the image grid (for "above", weight lands on the top rows). Zeroing `L0H0` alone drops spatial accuracy from 0.84 to 0.35; zeroing both drops it to 0.20, a super-additive effect that a four-way search shows no other head reproduces.
 
-Each panel below is `L0H0`'s query-key response to one relation word, read out over the 8x8 image grid. The head maps every relation onto a clean directional ramp: "above" puts weight on the top rows, "lower_right" on the bottom-right corner, and so on.
-
-![L0H0 query-key direction maps, one per relation](figures/inner_product_map_L0H0.png)
-
 - **Object binding is a separate, distributed stage.** A second stage in Layer 2 binds color and shape to the positions that Layer 0/1 laid out. No single Layer-2 head does much on its own, but co-ablating Layer 2 with Layer 0 damages color and shape far more than either alone.
-
-You can watch the layout fall apart as you remove heads: dropping `L1H2` alone changes almost nothing, dropping both routing heads makes the two objects collide, and removing all cross-attention destroys the layout entirely while the shapes themselves survive.
-
-![Generated images as cross-attention heads are progressively ablated](figures/qualitative_ablation_grid.png)
 
 - **You only see the binding stage if you score the right metric.** Pair-ablation scored on spatial accuracy alone says the binding stage does not exist, because spatial accuracy ignores which object is where. Scoring color and shape separately makes it appear. Single-metric ablation can quietly miss a whole downstream stage, which is a trap for circuit work in general, not just here.
 
 - **The circuit snaps into place.** Across training, the routing heads' projection strength jumps by about three orders of magnitude in a sharp phase transition around epochs 750 to 1000, and behavioral accuracy follows roughly 200 epochs later. Retraining on additional seeds reproduces both the sharp transition and the early-layer localization, though which exact head takes the role shifts from run to run.
 
-![Projection magnitude per head across training, with the phase transition shaded](figures/emergence.png)
+You can watch the layout fall apart as heads are removed: dropping `L1H2` alone changes almost nothing, dropping both routing heads makes the two objects collide, and removing all cross-attention destroys the layout entirely while the shapes themselves survive.
 
-See [`figures/`](figures/) for the paper figures and [`results/`](results/) for the per-experiment CSVs behind them. Neither requires the heavy training assets.
+![Generated images as cross-attention heads are progressively ablated](figures/qualitative_ablation_grid.png)
+
+See [`figures/`](figures/) for the full set of paper figures and [`results/`](results/) for the per-experiment CSVs behind them. Neither requires the heavy training assets.
 
 ## Repository layout
 
