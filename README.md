@@ -2,6 +2,8 @@
 
 Code, notebooks, and figures for our paper **A Two-Stage Cross-Attention Circuit for Spatial-Relation Binding in Small Diffusion Transformers**, presented at the ICML 2026 Mechanistic Interpretability workshop.
 
+[**Poster (PDF)**](ICML_MechInterp_Poster.pdf)
+
 ## Motivation
 
 Text-to-image diffusion transformers can place objects correctly: ask for "a red square above a blue circle" and the red square ends up on top. But how a model turns a relation word like "above" into actual image layout has not been worked out at the level of individual components. Most interpretability work on these models stops at attention-map attribution or points to whole blocks; almost all head-level circuit analysis so far has been done on language models, not image generators.
