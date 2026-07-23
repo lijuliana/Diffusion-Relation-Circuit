@@ -14,7 +14,13 @@ We wanted to know whether the same kind of head-level circuit story that people 
 
 The computation splits into two stages: two early heads decide *where* each object goes, and Layer 2 fills in *what* goes there.
 
-<img src="figures/circuit_diagram_poster.png" width="620" alt="Two-stage cross-attention circuit for spatial-relation binding">
+<p align="center">
+  <img
+    src="figures/circuit_diagram_poster.png"
+    width="620"
+    alt="Two-stage cross-attention circuit for spatial-relation binding"
+  />
+</p>
 
 
 - **Spatial routing lives in two early heads.** Two heads, `L0H0` and `L1H2` in layers 0 and 1, carry almost all of the spatial signal. Their query-key circuits turn the relation token into a directional bias over the image grid (for "above", weight lands on the top rows). Zeroing `L0H0` alone drops spatial accuracy from 0.84 to 0.35; zeroing both drops it to 0.20, a super-additive effect that a four-way search shows no other head reproduces.
